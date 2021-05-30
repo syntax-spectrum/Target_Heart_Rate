@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+            CIS213 Midterm
+            Author: Zachary Baird
+            Date: 3/21/2021
+        -->
+        <title>Midterm PE</title>
+    </head>
+    <script>
+        function displayHeartRate() {
+            var age = document.getElementById("age").value;
+            var maxhr = 220 - age;
+            var result = "Target Heart Rate: " + Math.floor(maxhr * 0.5) + " to " + Math.floor(maxhr * 0.85) + " Beats Per Minute";
+            
+
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+    <body>
+        <h1>Zachary Baird, Target Heart Rate</h1>
+        <label for="age">Your Age</label>
+        <input id="age" type="text">
+        <button onclick="displayHeartRate()">Calculate Target Heart Rate</button>
+        <br>
+        <label id="output"></label>
+    </body>
+</html>
